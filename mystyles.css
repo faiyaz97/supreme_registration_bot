@@ -1,0 +1,91 @@
+.logo{
+	text-align: center;
+	padding: 5px;
+}
+
+.form-style-3{
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin: auto;
+}
+.form-style-3 label{
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style-3 label > span{
+	float: left;
+	width: 100px;
+	color: #636363;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #636363;
+	padding: 20px;
+	background: #f3f3f3;
+	box-shadow: inset 0px 0px 15px #F1F1F1;
+	-moz-box-shadow: inset 0px 0px 15px #F1F1F1;
+	-webkit-box-shadow: inset 0px 0px 15px #F1F1F1;
+}
+.form-style-3 fieldset legend{
+	color: #000;
+	border-top: 1px solid #636363;
+	border-left: 1px solid #636363;
+	border-right: 1px solid #636363;
+	background: #f3f3f3;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	-moz-box-shadow:-0px -1px 2px #F1F1F1;
+	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+	font-weight: bold;
+	font-size: 12px;
+}
+.form-style-3 textarea{
+	width:250px;
+	height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #636363;
+	outline: none;
+	color: #636363;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px rgb(155, 148, 151);
+	-moz-box-shadow: inset 1px 1px 4px #F1F1F1;
+	-webkit-box-shadow: inset 1px 1px 4px #F1F1F1;
+	background: #fff;
+	width: 50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: #ff0000;
+	border: 0px solid #636363;
+	margin: 5px 15px 5px 0px;
+	color: #fff;
+	font-weight: normal;
+	width: 60px;
+	height: 25px;
+	float: left;
+}
+.form-style-3 select{
+	width: 54.5%;
+	padding: 5px 5px 5px 5px;
+
+}
+.required{
+	color:red;
+	font-weight:normal;
+}
