@@ -16,17 +16,21 @@ if (reg_status) {
     window.location.reload();
   },1000);
 
+} else {
+
+  console.log("Registration open!");
+
+  step1();
+
+  setTimeout(function(){ 
+    step2();
+  },333);
+
+  console.log("Registration DONE!");
+
 }
 
-console.log("Registration open!");
 
-step1();
-
-setTimeout(function(){ 
-  step2();
-},333);
-
-console.log("Registration DONE!");
 
 
 
@@ -74,8 +78,24 @@ function step2() {
   document.getElementsByName("address-1")[0].value = result.address;
   document.getElementsByName("zipcode")[0].value = result.postcode;
   document.getElementsByName("city")[0].value = result.city;
+  
+  
   document.getElementsByName('state')[0].click();
+  setTimeout(function(){
+    var ul = document.getElementsByClassName("el-scrollbar__view el-select-dropdown__list")[1];
+    var items = ul.getElementsByTagName("li");
+    for (var i = 0; i < items.length; ++i) {
+        // do something with items[i], which is a <li> element
+        //console.log(items[i].getElementsByTagName('span')[0].textContent);
+        var item = items[i].getElementsByTagName('span')[0].textContent;
+        if (item === "London, City of") {
+            items[i].click();
+        }
+    }
+  },333);
+  
 
+  //document.getElementsByName('country')[0].click();
   var ul = document.getElementsByClassName("el-scrollbar__view el-select-dropdown__list")[0];
   var items = ul.getElementsByTagName("li");
   for (var i = 0; i < items.length; ++i) {
@@ -85,22 +105,15 @@ function step2() {
         items[i].click();
       }
   }
+  
 
   
-  var ul = document.getElementsByClassName("el-scrollbar__view el-select-dropdown__list")[1];
-  var items = ul.getElementsByTagName("li");
-  for (var i = 0; i < items.length; ++i) {
-      // do something with items[i], which is a <li> element
-      //console.log(items[i].getElementsByTagName('span')[0].textContent);
-      var item = items[i].getElementsByTagName('span')[0].textContent;
-      if (item === "London, City of") {
-          items[i].click();
-      }
-  }
+  
 
   document.getElementsByName("number")[0].value = result.card_number;
   document.getElementsByName("credit-card-expiry")[0].value = result.card_month + "/" + result.card_year;
   document.getElementsByName("securityCode")[0].value = result.card_cvv;
+  
 
 
 
